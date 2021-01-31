@@ -11,10 +11,10 @@
 		E0D0C22225C7015000C864A7 /* DrinksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0C22125C7015000C864A7 /* DrinksListView.swift */; };
 		E0D0C22425C7015200C864A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D0C22325C7015200C864A7 /* Assets.xcassets */; };
 		E0D0C22725C7015200C864A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D0C22625C7015200C864A7 /* Preview Assets.xcassets */; };
-		E0D0C22925C7015200C864A7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0C22825C7015200C864A7 /* Persistence.swift */; };
 		E0D0C22C25C7015200C864A7 /* Know_Your_Limits.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0D0C22A25C7015200C864A7 /* Know_Your_Limits.xcdatamodeld */; };
 		E0D0C23725C7015200C864A7 /* Know_Your_LimitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0C23625C7015200C864A7 /* Know_Your_LimitsTests.swift */; };
 		E0D0C24225C7015200C864A7 /* Know_Your_LimitsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0C24125C7015200C864A7 /* Know_Your_LimitsUITests.swift */; };
+		E0D0C25E25C7037B00C864A7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0C22825C7015200C864A7 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +162,7 @@
 				E0D0C21825C7015000C864A7 /* Sources */,
 				E0D0C21925C7015000C864A7 /* Frameworks */,
 				E0D0C21A25C7015000C864A7 /* Resources */,
+				E0D0C25725C7033E00C864A7 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -276,13 +277,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E0D0C25725C7033E00C864A7 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E0D0C21825C7015000C864A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0D0C22925C7015200C864A7 /* Persistence.swift in Sources */,
 				E0D0C22225C7015000C864A7 /* DrinksListView.swift in Sources */,
+				E0D0C25E25C7037B00C864A7 /* Persistence.swift in Sources */,
 				E0D0C22025C7015000C864A7 /* Know_Your_LimitsApp.swift in Sources */,
 				E0D0C22C25C7015200C864A7 /* Know_Your_Limits.xcdatamodeld in Sources */,
 			);

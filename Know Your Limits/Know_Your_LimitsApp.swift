@@ -1,12 +1,12 @@
 import SwiftUI
 
 @main
-struct Know_Your_LimitsApp: App {
+struct KnowYourLimitsApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DrinksListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -1,7 +1,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct DrinksListView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -35,8 +35,6 @@ struct ContentView: View {
             do {
                 try viewContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
@@ -50,8 +48,6 @@ struct ContentView: View {
             do {
                 try viewContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
@@ -68,6 +64,6 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        DrinksListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
